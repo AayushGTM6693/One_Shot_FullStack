@@ -1,0 +1,4 @@
+local device wants to connect to internet -> sends req 
+to isp -> isp reaches to dns -> dns gives the ip to isp->
+isp look up to the internet to find the destination of the 
+initiated request.

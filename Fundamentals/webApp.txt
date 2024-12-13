@@ -1,0 +1,13 @@
+client send req to the webserver -> server access the database
+-> server sends response -> first server sends html first ->
+2nd css and 3rd logic(functionality) -> js -> js also takes some data through browser
+to the server
+
+client - frontend 
+server - serves the client (backend) -> node js , 
+contains the server side scripting lang
+
+database -> mysql (relational) , mongodb (non relational)
+
+Api - gateaway, medium through which frontend talks with backend
+json - api format ma hunxa
