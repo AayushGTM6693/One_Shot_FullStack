@@ -1,0 +1,53 @@
+Multimedia in HTML
+
+1. Introduction to Multimedia
+    - Multimedia refers to the integration of multiple forms of media, such as text, images, audio, video, and animations.
+    - HTML provides various elements to embed multimedia content in web pages.
+
+2. Images
+    - The <img> tag is used to embed images in HTML.
+    - Attributes: src (source of the image), alt (alternative text), width, height.
+    - Example:
+      <img src="image.jpg" alt="Description of image" width="500" height="600">
+      - <figure> contain garxa and we also can put figcaption inside the image
+
+3. Audio
+    - The <audio> tag is used to embed audio files.
+    - Attributes: src (source of the audio file), controls (to display audio controls).
+    - Example:
+      <audio src="audio.mp3" controls></audio>
+    - Supported audio formats: MP3, WAV, Ogg.
+
+4. Video
+    - The <video> tag is used to embed video files.
+    - Attributes: src (source of the video file), controls (to display video controls), width, height, autoplay, loop.
+    - Example:
+      <video src="video.mp4" controls width="600" height="400"></video>
+    - Supported video formats: MP4, WebM, Ogg.
+
+5. Embedding YouTube Videos
+    - You can embed YouTube videos using the <iframe> tag.
+    - Example:
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
+6. Canvas
+    - The <canvas> tag is used to draw graphics on a web page using JavaScript.
+    - Attributes: width, height.
+    - Example:
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+      <script>
+         var canvas = document.getElementById('myCanvas');
+         var context = canvas.getContext('2d');
+         context.fillStyle = 'red';
+         context.fillRect(10, 10, 150, 75);
+      </script>
+
+7. SVG (Scalable Vector Graphics)
+    - SVG is used to define vector-based graphics for the web.
+    - Example:
+      <svg width="100" height="100">
+         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+      </svg>
+
+8. Conclusion
+    - HTML provides a variety of elements to incorporate multimedia content into web pages, enhancing user experience and engagement.

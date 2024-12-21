@@ -1,0 +1,27 @@
+**Inline and Block Elements in HTML**
+
+- **BLOCK ELEMENTS**:
+    - Start on a new line and take up the full width available.
+    - Can contain other block elements and inline elements.
+    - Common examples: `<div>`, `<p>`, `<h1>` to `<h6>`, `<ul>`, `<ol>`, `<li>`, `<section>`, `<article>`.
+
+        ```html
+        <div>
+            <h1>Heading</h1>
+            <p>This is a paragraph inside a div.</p>
+        </div>
+        ```
+
+- **Inline Elements**:
+  - Do not start on a new line and only take up as much width as necessary.
+  - Generally contain text or other inline elements.
+  - Common examples: `<span>`, `<a>`, `<img>`, `<em>`, `<strong>`, `<label>`, `<input>`.
+
+    ```html
+    <p>This is a <span>highlighted</span> word in a sentence.</p>
+    ```
+
+- **Key Differences**:
+  - **Display Behavior**: Block elements stack vertically; inline elements flow horizontally within a block container.
+  - **Content Model**: Block elements can contain both block and inline elements; inline elements generally contain only inline elements or text.
+  - **Styling**: Block elements can have width, height, margins, and padding; inline elements cannot have width and height set but can have horizontal margins and padding.
