@@ -1,0 +1,82 @@
+CSS Selectors
+
+CSS selectors are used to "select" the HTML elements you want to style. Here are some of the most common types of CSS selectors:
+
+1. Universal Selector
+The universal selector (*) selects all elements on the page.
+Example:
+* {
+    color: blue;
+}
+
+2. Type Selector
+The type selector selects all elements of a given type.
+Example:
+p {
+    font-size: 16px;
+}
+
+3. Class Selector
+The class selector selects all elements with a specific class attribute.
+Example:
+.my-class {
+    background-color: yellow;
+}
+
+4. ID Selector
+The ID selector selects a single element with a specific ID attribute.
+Example:
+#my-id {
+    border: 1px solid black;
+}
+
+5. Attribute Selector
+The attribute selector selects elements based on an attribute or attribute value.
+Example:
+input[type="text"] {
+    width: 200px;
+}
+
+6. Descendant Selector
+The descendant selector selects elements that are descendants of another element.
+Example:
+div p {
+    margin: 10px;
+}
+
+7. Child Selector
+The child selector selects elements that are direct children of another element.
+Example:
+ul > li {
+    list-style-type: none;
+}
+
+8. Adjacent Sibling Selector
+The adjacent sibling selector selects an element that is immediately preceded by another element.
+Example:
+h1 + p {
+    font-weight: bold;
+}
+
+9. General Sibling Selector
+The general sibling selector selects all elements that are siblings of a specified element.
+Example:
+h1 ~ p {
+    color: red;
+}
+
+10. Pseudo-class Selector
+The pseudo-class selector selects elements based on their state.
+Example:
+a:hover {
+    text-decoration: underline;
+}
+
+11. Pseudo-element Selector
+The pseudo-element selector selects and styles a part of an element.
+Example:
+p::first-line {
+    font-style: italic;
+}
+
+These are just some of the many selectors available in CSS. By combining these selectors, you can target elements in a variety of ways to create complex and specific styles for your web pages.
