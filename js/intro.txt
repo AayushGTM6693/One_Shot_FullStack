@@ -1,0 +1,203 @@
+1. Basics of JavaScript
+Definition: JavaScript is a high-level, interpreted programming language primarily used for adding interactivity to web pages. It is a dynamically typed and loosely typed language.
+
+Use Cases:
+- Client-side web development
+- Server-side development (e.g., Node.js)
+- Game development
+- Mobile app development
+
+2. Data Types
+JavaScript has two types of values: Primitive and Non-Primitive (Reference).
+
+Primitive Data Types:
+- Number: Represents both integers and floating-point numbers.
+    ```javascript
+    let age = 25;
+    let price = 19.99;
+    ```
+- String: Represents textual data. Strings are immutable.
+    ```javascript
+    let name = "John";
+    ```
+- Boolean: Represents true or false.
+    ```javascript
+    let isLoggedIn = false;
+    ```
+- Undefined: A variable declared but not assigned any value.
+    ```javascript
+    let x;
+    console.log(x); // undefined
+    ```
+- Null: Represents an intentional absence of value.
+    ```javascript
+    let y = null;
+    ```
+- BigInt: Used for numbers larger than 2^53 - 1.
+    ```javascript
+    let largeNumber = 123456789012345678901234567890n;
+    ```
+- Symbol: A unique and immutable value often used as object keys.
+    ```javascript
+    let sym = Symbol("unique");
+    ```
+
+Reference Data Types:
+- Objects: Collections of key-value pairs (including arrays and functions).
+    ```javascript
+    let obj = { name: "Alice", age: 30 };
+    let arr = [1, 2, 3];
+    ```
+
+3. Variables
+JavaScript supports three types of variable declarations:
+
+- var:
+    - Function-scoped.
+    - Can be re-declared and updated.
+    - Hoisted with undefined value.
+    ```javascript
+    var x = 10;
+    ```
+
+- let:
+    - Block-scoped.
+    - Cannot be re-declared in the same scope but can be updated.
+    ```javascript
+    let y = 20;
+    ```
+
+- const:
+    - Block-scoped.
+    - Cannot be re-declared or updated.
+    ```javascript
+    const z = 30;
+    ```
+
+4. Operators
+- Arithmetic Operators: `+, -, *, /, %, ++, --`
+    ```javascript
+    let sum = 10 + 20; // 30
+    ```
+
+- Comparison Operators: `==, !=, ===, !==, <, >, <=, >=`
+    ```javascript
+    console.log(5 === "5"); // false
+    ```
+
+- Logical Operators: `&&, ||, !`
+    ```javascript
+    console.log(true && false); // false
+    ```
+
+- Assignment Operators: `=, +=, -=, *=, /=`
+    ```javascript
+    let x = 5;
+    x += 2; // x = 7
+    ```
+
+- Type Operators:
+    - `typeof`: Determines the type of a value.
+    - `instanceof`: Checks if an object is an instance of a constructor.
+    ```javascript
+    console.log(typeof 42); // "number"
+    ```
+
+5. Control Structures
+- Conditional Statements:
+    - if-else
+        ```javascript
+        if (x > 0) {
+            console.log("Positive");
+        } else {
+            console.log("Non-positive");
+        }
+        ```
+
+    - switch
+        ```javascript
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            default:
+                console.log("Other day");
+        }
+        ```
+
+- Loops:
+    - for
+        ```javascript
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        ```
+
+    - while
+        ```javascript
+        let i = 0;
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+        ```
+
+    - do-while
+        ```javascript
+        let i = 0;
+        do {
+            console.log(i);
+            i++;
+        } while (i < 5);
+        ```
+
+    - for...in (iterates over object properties)
+        ```javascript
+        let obj = { a: 1, b: 2 };
+        for (let key in obj) {
+            console.log(key);
+        }
+        ```
+
+    - for...of (iterates over iterable objects like arrays)
+        ```javascript
+        let arr = [10, 20, 30];
+        for (let value of arr) {
+            console.log(value);
+        }
+        ```
+
+6. Functions
+- Function Declaration
+    ```javascript
+    function add(a, b) {
+        return a + b;
+    }
+    ```
+
+- Function Expression
+    ```javascript
+    const multiply = function (a, b) {
+        return a * b;
+    };
+    ```
+
+- Arrow Functions
+    ```javascript
+    const subtract = (a, b) => a - b;
+    ```
+
+- Default Parameters
+    ```javascript
+    function greet(name = "Guest") {
+        console.log("Hello, " + name);
+    }
+    ```
+
+- Rest Parameters
+    ```javascript
+    function sum(...numbers) {
+        return numbers.reduce((a, b) => a + b, 0);
+    }
+    ```
+
