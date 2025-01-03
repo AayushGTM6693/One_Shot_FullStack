@@ -186,26 +186,28 @@ A weather web app fetches live data using a weather API.
 
 ## Example Code Snippet
 
-Here’s a simple Python script using Flask to demonstrate a basic web server:
+Here’s a simple JavaScript example using Node.js and Express to demonstrate a basic web server:
 
-```python
-from flask import Flask
+```javascript
+const express = require("express");
+const app = express();
 
-app = Flask(__name__)
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 
-@app.route('/')
-def home():
-    return "Hello, World!"
-
-if __name__ == '__main__':
-    app.run(debug=True)
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 ```
 
 ### Explanation:
 
-1. Install Flask: `pip install flask`.
-2. Run the script and access `http://127.0.0.1:5000` in your browser.
-3. The server responds with "Hello, World!".
+1. Install Express: `npm install express`.
+2. Run the script: `node app.js`.
+3. Access `http://localhost:3000` in your browser.
+4. The server responds with "Hello, World!".
 
 ---
 
