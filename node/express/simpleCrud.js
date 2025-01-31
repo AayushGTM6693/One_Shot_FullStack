@@ -1,11 +1,30 @@
 import express from "express";
+import logger from "./logger.js";
+import morgan from "morgan";
 
 const app = express();
 
 app.use(express.json()); // kun type ko data server le accept garna sakxa
+const morganFormat = ":method :url :status :response-time ms";
 
 const data = [];
 let id = 1;
+
+app.use(
+  morgan(morganFormat, {
+    stream: {
+      write: (message) => {
+        const logObject = {
+          method: message.split(" ")[0],
+          url: message.split(" ")[1],
+          status: message.split(" ")[2],
+          responseTime: message.split(" ")[3],
+        };
+        logger.info(JSON.stringify(logObject));
+      },
+    },
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("hello from the express");
@@ -17,6 +36,7 @@ app.post("/stdData", (req, res) => {
   data.push({ newId, name, roll });
   console.log("Data after POST:", data);
   res.status(201).send(data);
+  //logger.info("post req bhayo"); - alternative to console.log
 });
 
 app.get("/stdData", (_, res) => {
